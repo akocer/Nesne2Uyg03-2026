@@ -21,5 +21,10 @@ namespace Nesne2Uyg03_2026.Forms
         {
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
