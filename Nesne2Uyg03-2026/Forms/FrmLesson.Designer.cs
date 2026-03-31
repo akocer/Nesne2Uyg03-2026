@@ -139,6 +139,7 @@
             dgLesson.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgLesson.Size = new Size(697, 412);
             dgLesson.TabIndex = 82;
+            dgLesson.CellClick += dgLesson_CellClick;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -193,6 +194,7 @@
             btnDelete.TabIndex = 81;
             btnDelete.Text = "Sil";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -203,6 +205,7 @@
             btnUpdate.TabIndex = 78;
             btnUpdate.Text = "Düzenle";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnSave
             // 
@@ -240,6 +243,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmLesson";
             Text = "FrmLesson";
+            Load += FrmLesson_Load;
             ((System.ComponentModel.ISupportInitialize)dgLesson).EndInit();
             ResumeLayout(false);
             PerformLayout();
