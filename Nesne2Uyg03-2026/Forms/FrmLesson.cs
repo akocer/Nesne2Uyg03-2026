@@ -16,5 +16,10 @@ namespace Nesne2Uyg03_2026.Forms
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
