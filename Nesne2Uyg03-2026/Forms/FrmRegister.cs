@@ -105,7 +105,7 @@ namespace Nesne2Uyg03_2026.Forms
 
         private void dgStudentLesson_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
 
         private void dgStudent_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -118,6 +118,26 @@ namespace Nesne2Uyg03_2026.Forms
             {
                 dgStudentLesson.Rows.Add(register.Id, register.Lesson.Code, register.Lesson.Name, register.Lesson.Credit);
             }
+        }
+
+        private void removeStudent_Click(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(dgLessonStudent.CurrentRow.Cells[0].Value.ToString());
+            var studentName = dgLessonStudent.CurrentRow.Cells[2].Value.ToString();
+            var lessonName = dgLesson.CurrentRow.Cells[2].Value.ToString();
+
+            if (MessageBox.Show(studentName + " adlı öğrenci " + lessonName + " dersinden çıkarılacaktır onaylıyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
+            var register = db.Registers.Where(s => s.Id == id).SingleOrDefault();
+            if (register != null)
+            {
+                db.Registers.Remove(register);
+                db.SaveChanges();
+            }
+            MessageBox.Show("Ders Kaydı Silindi", "Tamam", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

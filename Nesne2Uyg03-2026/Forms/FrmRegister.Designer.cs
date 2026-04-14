@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             dgStudent = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -52,6 +53,8 @@
             dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            removeStudent = new ToolStripMenuItem();
             btnRegister = new Button();
             txtLessonSearch = new TextBox();
             label3 = new Label();
@@ -61,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)dgLesson).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgStudentLesson).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgLessonStudent).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -246,6 +250,7 @@
             dgLessonStudent.AllowUserToDeleteRows = false;
             dgLessonStudent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgLessonStudent.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16, dataGridViewTextBoxColumn17 });
+            dgLessonStudent.ContextMenuStrip = contextMenuStrip1;
             dgLessonStudent.Location = new Point(12, 368);
             dgLessonStudent.Name = "dgLessonStudent";
             dgLessonStudent.ReadOnly = true;
@@ -295,6 +300,20 @@
             dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             dataGridViewTextBoxColumn17.ReadOnly = true;
             dataGridViewTextBoxColumn17.Width = 150;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(24, 24);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { removeStudent });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(270, 69);
+            // 
+            // removeStudent
+            // 
+            removeStudent.Name = "removeStudent";
+            removeStudent.Size = new Size(269, 32);
+            removeStudent.Text = "Öğrenciyi Dersten Çıkar";
+            removeStudent.Click += removeStudent_Click;
             // 
             // btnRegister
             // 
@@ -371,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)dgLesson).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgStudentLesson).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgLessonStudent).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -406,5 +426,7 @@
         private Label label3;
         private TextBox txtStudentSearch;
         private Label label4;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem removeStudent;
     }
 }
