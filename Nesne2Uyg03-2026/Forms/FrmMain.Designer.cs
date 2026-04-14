@@ -47,7 +47,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1385, 121);
+            panel1.Size = new Size(1624, 121);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -71,7 +71,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 121);
             panel2.Name = "panel2";
-            panel2.Size = new Size(262, 582);
+            panel2.Size = new Size(262, 722);
             panel2.TabIndex = 1;
             // 
             // btnExit
@@ -132,19 +132,20 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(262, 121);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1123, 582);
+            panel3.Size = new Size(1362, 722);
             panel3.TabIndex = 2;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1385, 703);
+            ClientSize = new Size(1624, 843);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FrmMain";
             Text = "Öğrenci Takip";
+            Load += FrmMain_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

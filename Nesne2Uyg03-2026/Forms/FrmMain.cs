@@ -35,5 +35,10 @@ namespace Nesne2Uyg03_2026
         {
             Application.Exit();
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
